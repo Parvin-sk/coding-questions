@@ -1,0 +1,24 @@
+class hello{
+    public static String hi(String s){
+        int count=0;
+        String Ans="";
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='1'){
+                count++;
+            }
+            else{
+                Ans=Ans+(char)(64+count);
+                count=0;
+            }
+        }
+        if(count>0){   //this code is for appending last  sequence of 1's where for remaining all 1's 0 will act as a separater but for last sequence 0 doesnt encounter ,so count will incremented by the for loop and last sequence is appended by this condition.
+            Ans=Ans+(char)(64+count);
+        }
+        return Ans;
+    }
+    public static void main(String...args){
+        String s="101101111";
+        System.out.println(hi(s));
+    }
+}
+your provided with a string which has a sequence of 0's and 1's.this sequence is encoded version of english word.you are supposed to write a program to decode the provided string and find the original word A:1,B:11,C:111 and z will have 26 1's the sequence of 1's in the encoded form are separated by single 0 which helps to distinguish between 2 letters example:10110111 Ans:ABC give me java code with the approch of using Ascii value where we initialize a count variable to 0 and when 1 occurs count increases and and number of 1's is added to the value 64 and retuns the output . give a java code where a method gives answer to the main meyhod
