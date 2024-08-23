@@ -1,0 +1,23 @@
+class hello{
+    public static boolean hi(int n){
+        int sum=0;
+       
+        while(n>0){
+            
+            sum=sum+n%10;
+            n=n/10;
+        }
+        for(int i=2;i<Math.sqrt(sum);i++){
+            if(sum%i==0){
+                return false;
+                
+            }
+            
+        }
+        return true;
+    }
+    public static void main(String...args){
+        int n=1235;
+        System.out.println(hi(n));
+    }
+}  a googly primr number is defined as anumber that is derived from sum of its individual digits .for example ,if N=43,the sum of its individual digits is 4+3=7,which is prime number making it a googly prime number. your task is to find whether the current number is googly prime are not. write a java code where a methid is calling the main method
